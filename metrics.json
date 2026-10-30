@@ -1,0 +1,7 @@
+{
+  "data": "SYNTHETIC ONLY - not real-world accuracy",
+  "v1_macro_f1": 1.0,
+  "v2_macro_f1": 1.0,
+  "predictions_changed": 0,
+  "test_windows": 460
+}
