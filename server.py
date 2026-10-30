@@ -116,5 +116,13 @@ class H(BaseHTTPRequestHandler):
  def log_message(self,*a): pass
 
 def main(port=8000):
- threading.Thread(target=E.loop,daemon=True).start(); print(f'HELIOS INTELLIGENCE V1.2: http://127.0.0.1:{port} (SIMULATION ONLY)'); ThreadingHTTPServer(('127.0.0.1',port),H).serve_forever()
-if __name__=='__main__': main()
+ port = int(port or os.environ.get('PORT', '8000'))
+    host = '0.0.0.0'
+
+    threading.Thread(target=E.loop, daemon=True).start()
+    print(f'HELIOS INTELLIGENCE V1.2: listening on {host}:{port} (SIMULATION ONLY)')
+    ThreadingHTTPServer((host, port), H).serve_forever()
+
+
+if __name__ == '__main__':
+    main()
