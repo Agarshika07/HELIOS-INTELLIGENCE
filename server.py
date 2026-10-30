@@ -1,7 +1,7 @@
 """HELIOS INTELLIGENCE V1.2 — stateful mobility scenario simulator and decision console.
 All generated telemetry is SIMULATION, not physical VAULT measurements.
 """
-import json, threading, time
+import json, os, threading, time
 from collections import deque
 from http.server import ThreadingHTTPServer, BaseHTTPRequestHandler
 from pathlib import Path
